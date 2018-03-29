@@ -1,0 +1,22 @@
+{
+  "name": "koa-mock",
+  "version": "1.0.0",
+  "description": "it's a mock-server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./index.js",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chenghao",
+  "license": "ISC",
+  "devDependencies": {
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^7.4.0",
+    "mock": "^0.1.1",
+    "mockjs": "^1.0.1-beta3"
+  }
+}
