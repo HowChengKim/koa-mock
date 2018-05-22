@@ -6,7 +6,7 @@ const app = new Koa();
 const router = new Router();
 const bodyparser = require('koa-bodyparser');
 const convert = require('koa-convert');
-const bankList = require('./router/bank');
+const testList = require('./router/test');
 app.use(convert(cors()));
 
 app.use(bodyparser({
@@ -17,10 +17,9 @@ app.use(bodyparser({
     jsonLimit: '50mb',
     textLimit: '50mb'
 }));
-router.use('/resource', bankList.routes(), bankList.allowedMethods());
+router.use('/mapPoint', testList.routes(), testList.allowedMethods());
 app.use(router.routes(), router.allowedMethods());
 
-// app.listen(12000);
 const server = http.createServer(app.callback());
 server.on('listening', onListening);
 server.listen(12000);
